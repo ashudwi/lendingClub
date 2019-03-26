@@ -1,6 +1,6 @@
 
 ###############################################################
-# Title: Risk Prediction
+# Title: Predict Credit Score and Interest Rate
 ###############################################################
 
 ###############################################################
@@ -223,15 +223,12 @@ df = pd.get_dummies(df, columns=dummy_cols)
 df.shape
 df.head(5)
 
-
 ###############################################################
 # 3. Model Planning
 ###############################################################
 # Split dependent and independent features
 X = np.array(df.ix[:, df.columns != 'loan_status'])
 y = np.array(df.ix[:, df.columns == 'loan_status'])
-
-# (X_train, X_test, y_train, y_test) = train_test_split(df, 'loan_status', test_size=.2)
 
 ###############################################################
 # 3.1 Train, Test Split
